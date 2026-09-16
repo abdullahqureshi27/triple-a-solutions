@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { MessageCircle } from "lucide-react";
+import { WHATSAPP_URL } from "@/lib/contact";
 
 export default function FloatingWhatsApp() {
   const [visible, setVisible] = useState(false);
@@ -21,7 +22,7 @@ export default function FloatingWhatsApp() {
       }`}
     >
       <a
-        href="https://wa.me/923290079500?text=Hi%2C%20I%20want%20to%20inquire%20about%20your%20services"
+        href={WHATSAPP_URL}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contact on WhatsApp"

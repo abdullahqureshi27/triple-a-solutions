@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { ArrowUp } from "lucide-react";
+import { PHONE_NUMBER, TEL_URL } from "@/lib/contact";
 
 const NAV_LINKS = [
   { label: "Home", href: "#Top" },
@@ -100,10 +101,10 @@ export default function Footer() {
                 team@thebrandif.com
               </a>
               <a
-                href="tel:+923290079500"
+                href={TEL_URL}
                 className="text-base text-neutral-300 hover:text-[#B5FF2F] block"
               >
-                +92 329 0079500
+                {PHONE_NUMBER}
               </a>
             </div>
 

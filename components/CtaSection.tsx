@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import { ArrowUpRight, PenTool } from "lucide-react";
+import { WHATSAPP_URL } from "@/lib/contact";
 
 export default function CtaSection() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -90,7 +91,7 @@ export default function CtaSection() {
 
         {/* Right Interactive CTA Box */}
         <a
-          href="https://wa.me/923290079500?text=Hi%2C%20I%20want%20to%20inquire%20about%20your%20services"
+          href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="group flex flex-col items-start gap-6 cursor-pointer"

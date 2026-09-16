@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, X } from "lucide-react";
+import { PHONE_NUMBER, WHATSAPP_URL } from "@/lib/contact";
 
 // Clean vector brand icons
 const InstagramIcon = ({ className = "w-4 h-4 fill-current" }: { className?: string }) => (
@@ -236,12 +237,12 @@ export default function Header() {
                   team@thebrandif.com
                 </a>
                 <a
-                  href="https://wa.me/923290079500?text=Hi%2C%20I%20want%20to%20inquire%20about%20your%20services"
+                  href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-white/60 hover:text-[#B5FF2F] block mt-1"
                 >
-                  +92 329 0079500 (WhatsApp)
+                  {PHONE_NUMBER} (WhatsApp)
                 </a>
               </div>
 
