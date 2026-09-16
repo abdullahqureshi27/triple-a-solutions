@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Funnel+Display:wght@300;400;500;600;700&family=Inter+Tight:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -120,11 +121,69 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    box-sizing: border-box;
   }
   body {
-    @apply bg-background text-foreground;
+    background-color: #141414;
+    color: #ffffff;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
   }
-  html {
-    @apply font-sans;
-  }
+}
+
+/* Brandif Slide Up Button */
+.slide-up-btn {
+  overflow: hidden !important;
+  position: relative;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer;
+}
+
+.slide-up-btn .btn-text-wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  height: 1.15em !important;
+  line-height: 1.15em !important;
+}
+
+.slide-up-btn .btn-text-wrapper span {
+  display: block !important;
+  line-height: 1.15em !important;
+  white-space: nowrap !important;
+  transition: transform 0.42s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  height: 1.15em;
+}
+
+.slide-up-btn:hover .btn-text-wrapper span {
+  transform: translateY(-100%) !important;
+}
+
+/* Typography Utility Classes */
+.font-funnel {
+  font-family: 'Funnel Display', sans-serif;
+}
+
+.font-inter-tight {
+  font-family: 'Inter Tight', sans-serif;
+}
+
+.font-dm-sans {
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbars where needed */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
