@@ -110,7 +110,7 @@ export default function StackingCards() {
             <a
               href="#contact"
               aria-label={`Inquire about ${card.title}`}
-              className={`absolute top-6 right-6 sm:top-10 sm:right-10 w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-110 hover:rotate-45 shadow-lg ${card.arrowBg} ${card.arrowColor}`}
+              className={`absolute top-6 right-6 sm:top-10 sm:right-10 z-30 pointer-events-auto w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-110 hover:rotate-45 shadow-lg ${card.arrowBg} ${card.arrowColor}`}
             >
               <ArrowUpRight className="w-6 h-6 sm:w-7 sm:h-7" />
             </a>
@@ -152,9 +152,8 @@ export default function StackingCards() {
                     alt={card.title}
                     fill
                     sizes="(max-width: 1024px) 100vw, 40vw"
-                    className="object-contain lg:object-cover transition-transform duration-700 hover:scale-105"
+                    className="object-contain transition-transform duration-700 hover:scale-105"
                   />
-
                 </div>
               </div>
             </div>
